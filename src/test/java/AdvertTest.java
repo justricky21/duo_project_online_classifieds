@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class AdvertTest {
-    Advert advert;
+    private Advert advert;
 
     @Before
     public void before(){
@@ -13,56 +13,56 @@ public class AdvertTest {
     }
 
     @Test
-    public void hasTitle(){
+    public void advertHasTitle(){
         assertEquals("Awesome Guitar, used by Hendrix", advert.getTitle());
     }
 
     @Test
-    public void hasDescription(){
+    public void advertHasDescription(){
         assertEquals("Awesome guitar that Hendrix destroyed during his 1974 concert, restored to functionality", advert.getDescription());
     }
 
     @Test
-    public void hasCategory(){
+    public void advertHasCategory(){
         assertEquals("Instruments", advert.getCategory());
     }
 
     @Test
-    public void hasAskingPrice(){
+    public void advertHasAskingPrice(){
         assertEquals(10000, advert.getAskingPrice());
     }
 
     @Test
-    public void hasDeliveryOption(){
+    public void advertHasDeliveryOption(){
         assertEquals("Pick-up", advert.getDeliveryOption());
     }
 
     @Test
-    public void canSetTitle(){
+    public void advertCanSetTitle(){
         advert.setTitle("Something");
         assertEquals("Something", advert.getTitle());
     }
 
     @Test
-    public void canSetDescription(){
+    public void advertCanSetDescription(){
         advert.setDescription("Something");
         assertEquals("Something", advert.getDescription());
     }
 
     @Test
-    public void canSetCategory(){
+    public void advertCanSetCategory(){
         advert.setCategory("Something");
         assertEquals("Something", advert.getCategory());
     }
 
     @Test
-    public void canSetAskingPrice(){
+    public void advertCanSetAskingPrice(){
         advert.setAskingPrice(1);
         assertEquals(1, advert.getAskingPrice());
     }
 
     @Test
-    public void canSetDeliveryOption(){
+    public void advertCanSetDeliveryOption(){
         advert.setDeliveryOption("Something");
         assertEquals("Something", advert.getDeliveryOption());
     }
