@@ -1,5 +1,9 @@
 package models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "adverts")
 public class Advert {
     /*
     +title String
@@ -29,6 +33,9 @@ public class Advert {
     public Advert() {
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -37,6 +44,7 @@ public class Advert {
         this.id = id;
     }
 
+    @Column(name = "title")
     public String getTitle() {
         return title;
     }
@@ -45,6 +53,7 @@ public class Advert {
         this.title = title;
     }
 
+    @Column(name = "description")
     public String getDescription() {
         return description;
     }
@@ -53,6 +62,7 @@ public class Advert {
         this.description = description;
     }
 
+    //AWAITING ENUM
     public String getCategory() {
         return category;
     }
@@ -61,6 +71,7 @@ public class Advert {
         this.category = category;
     }
 
+    @Column(name = "asking_price")
     public int getAskingPrice() {
         return askingPrice;
     }
@@ -69,6 +80,7 @@ public class Advert {
         this.askingPrice = askingPrice;
     }
 
+    //AWAITING ENUM
     public String getDeliveryOption() {
         return deliveryOption;
     }

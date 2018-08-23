@@ -1,5 +1,9 @@
 package models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "users")
 public class User {
     /*
     +firstName String
@@ -43,6 +47,9 @@ public class User {
     public User() {
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -51,6 +58,7 @@ public class User {
         this.id = id;
     }
 
+    @Column(name = "first_name")
     public String getFirstName() {
         return firstName;
     }
@@ -59,6 +67,7 @@ public class User {
         this.firstName = firstName;
     }
 
+    @Column(name = "last_name")
     public String getLastName() {
         return lastName;
     }
@@ -67,6 +76,7 @@ public class User {
         this.lastName = lastName;
     }
 
+    @Column(name = "address_line_1")
     public String getAddressLine1() {
         return addressLine1;
     }
@@ -75,6 +85,7 @@ public class User {
         this.addressLine1 = addressLine1;
     }
 
+    @Column(name = "address_line_2")
     public String getAddressLine2() {
         return addressLine2;
     }
@@ -83,6 +94,7 @@ public class User {
         this.addressLine2 = addressLine2;
     }
 
+    @Column(name = "city")
     public String getAddressCity() {
         return addressCity;
     }
@@ -91,6 +103,7 @@ public class User {
         this.addressCity = addressCity;
     }
 
+    @Column(name = "county")
     public String getAddressCounty() {
         return addressCounty;
     }
@@ -99,6 +112,7 @@ public class User {
         this.addressCounty = addressCounty;
     }
 
+    @Column(name = "post_code")
     public String getPostCode() {
         return postCode;
     }
@@ -107,6 +121,7 @@ public class User {
         this.postCode = postCode;
     }
 
+    @Column(name = "username")
     public String getUsername() {
         return username;
     }
@@ -115,6 +130,7 @@ public class User {
         this.username = username;
     }
 
+    @Column(name = "contact_phone")
     public String getContactPhone() {
         return contactPhone;
     }
@@ -123,6 +139,7 @@ public class User {
         this.contactPhone = contactPhone;
     }
 
+    @Column(name = "contact_email")
     public String getContactEmail() {
         return contactEmail;
     }
